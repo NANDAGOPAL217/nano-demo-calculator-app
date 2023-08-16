@@ -15,7 +15,7 @@ def create_employee():
     try:
         data = request.json
         if 'name' in data and 'city' in data:
-            employee_id = str(len(employees) + 1)
+            employee_id = str(len(employees)+1)
             data['employeeId'] = employee_id
             employees.append(data)
             return jsonify({"employeeId": employee_id}), 201
